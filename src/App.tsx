@@ -1,10 +1,29 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route
+  
+} from "react-router-dom";
+import Header from "./components/Header";
 
+
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={< Header/>}>
+    </Route>
+  )
+);
 function App() {
+
+
+  
  
   return (
     <>
-   <h1 className="text-blue-950 text-center text-4xl">Hello BACKER CHAIN</h1>
-        
+   <RouterProvider router={router} /> 
     </>
   )
 }
